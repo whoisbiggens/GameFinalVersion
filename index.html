@@ -581,18 +581,24 @@
     @media (max-width: 768px) {
       .words-list { flex: 0 0 150px; }
     }
-    @media (max-width: 600px) {
-      .word-search-container { flex-direction: column; }
-      .words-list { flex: 1; width: 100%; max-width: 100%; order: -1; }
-      #sopaWordsList { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
-      .word-item { margin-bottom: 0; }
-      .word-grid { grid-template-columns: repeat(12, 1fr); gap: 1px; padding: 4px; }
-      .grid-cell { font-size: clamp(0.55rem, 3.8vw, 0.75rem); }
-    }
-    @media (max-width: 380px) {
-      .word-grid { grid-template-columns: repeat(12, 1fr); gap: 1px; padding: 3px; }
-      .grid-cell { font-size: clamp(0.5rem, 3.5vw, 0.65rem); }
-    }
+@media (max-width: 600px) {
+  .word-search-container { flex-direction: column; align-items: center; }
+  .words-list { flex: 1; width: 100%; max-width: 100%; order: -1; }
+  #sopaWordsList { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .word-item { margin-bottom: 0; }
+  .grid-container { width: 100%; }
+  .word-grid {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2px;
+    padding: 6px;
+    width: 100%;
+  }
+  .grid-cell { font-size: clamp(0.75rem, 4.5vw, 0.95rem); }
+}
+@media (max-width: 380px) {
+  .word-grid { gap: 1px; padding: 4px; }
+  .grid-cell { font-size: clamp(0.65rem, 4vw, 0.80rem); }
+}
 
     /* =============================================
        RESPONSIVO GLOBAL
